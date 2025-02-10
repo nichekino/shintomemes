@@ -11,6 +11,27 @@
         <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/nichekino/shintomemes/refs/heads/main/Shintomemes.webp">
         <title>Shintomemes</title>
         <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #image {
+                max-width: 25vw;
+                max-height: 25vh;
+                width: auto;
+                height: auto;
+                border-radius: 2px;
+                cursor: pointer;
+                transition: scale 100ms ease-out;
+            }
+            #image:active {
+                scale: 0.98;
+            }
+        </style>
+        <style>
             #start-text {
                 font-size: 20px;
                 text-align: center;
@@ -38,9 +59,6 @@
             html, body {
                 overflow: hidden;
                 height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
             }
         </style>
     </head>
