@@ -11,35 +11,6 @@
         <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/nichekino/shintomemes/refs/heads/main/Shintomemes.webp">
         <title>Shintomemes</title>
         <style>
-            html, body {
-                height: 25%;
-                margin: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            #image {
-                max-width: 90vw;
-                max-height: 90vh;
-                width: auto;
-                height: auto;
-                border-radius: 2px;
-                cursor: pointer;
-                transition: scale 100ms ease-out;
-                border-radius: 10px;
-                z-index: 1;
-            }
-            #image:active {
-                scale: 0.98;
-            }
-        </style>
-        <style>
-            #start-text {
-                font-size: 20px;
-                text-align: center;
-                margin-top: 50px;
-                z-index: 2;
-            }
             body {
                 background-image: url("https://raw.githubusercontent.com/nichekino/shintomemes/refs/heads/main/bg.webp");
                 background-size: cover;
@@ -93,10 +64,6 @@
                 let audio = document.getElementById("bg-music");
                 if (audio.paused) {
                     audio.play();
-                }
-                let text = document.getElementById("start-text");
-                if (text) {
-                    text.style.display = "none";
                 }
             }, {once: true}); //Runs once
         </script>
