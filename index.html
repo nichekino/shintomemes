@@ -64,7 +64,7 @@
             <!-- <img id="randomImage" alt="sanae-middle" style="width: min(450px, 75vw); animation: spin infinite linear; animation-duration: 60s; border-readius: 2px; cursor: pointer; transition: transform 0.2s ease-in-out;"> -->
             <img id="randomImage" alt="sanae-middle" class="image">
         </div>
-        <div id="click-count">Dibated: 0¥</div>
+        <div id="click-count">Donated: 0¥</div>
         <script>
             let clickCount = 0;
             function increment() {
@@ -74,7 +74,7 @@
                 const img = document.querySelector(".image");
                 img.style.transform = "scale(0.9)";
                 setTimeout(() => {
-                    img.style.transform = "scale(1);
+                    img.style.transform = "scale(1)";
                 }, 50);
             }
         </script>
