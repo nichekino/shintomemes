@@ -111,6 +111,7 @@
                 return null;
             }
             let clickCount = parseInt(getCookie("counter")) || 0;
+            document.getElementById("click-count").textContent = 'Donated: ' + clickCount + "¥";
             function increment() {
                 clickCount ++;
                 document.getElementById("click-count").textContent = 'Donated: ' + clickCount + "¥";
