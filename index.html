@@ -9,8 +9,16 @@
         <meta property="og:image" content="https://raw.githubusercontent.com/nichekino/shintomemes/refs/heads/main/Shintomemes.webp">
         <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/nichekino/shintomemes/refs/heads/main/Shintomemes.webp">
         <title>Shintomemes</title>
+        <style>
+            #start-text {
+                font-size: 20px;
+                text-align: center;
+                margin-top: 50px;
+            }
+        </style>
     </head>
     <body>
+        <p id="start-text">Click anywhere to donate!</p>
         <audio id="bg-music" autoplay loop>
             <source src="https://github.com/nichekino/shintomemes/raw/refs/heads/main/MoFTitle.mp3" type=audio/mpeg>
         </audio>
@@ -21,12 +29,16 @@
             });
         </script>
         <script>
-            document.addEventListener("click", function() {
+            document.addEventListener("click", function() { //Activates BG on click.
                 let audio = document.getElementById("bg-music");
                 if (audio.paused) {
                     audio.play();
                 }
-            });
+                let text = document.getElementById("start-text");
+                if (text) {
+                    text.style.display = "none";
+                }
+            }, {once: true}); //Runs once
         </script>
     </body>
 <html>
