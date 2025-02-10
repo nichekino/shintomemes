@@ -18,6 +18,11 @@
             document.addEventListener("DOMContentLoaded", function() {
                 let audio = document.getElementById("bg-music");
                 audio.volume = 0.25;
+            });
+        </script>
+        <script>
+            document.addEventListener("click", function() {
+                let audio = document.getElementById("bg-music");
                 if (audio.paused) {
                     audio.play();
                 }
