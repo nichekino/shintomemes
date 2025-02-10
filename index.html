@@ -44,10 +44,11 @@
                 "https://github.com/nichekino/shintomemes/blob/main/sanae-middle/image1.png?raw=true",
                 "https://github.com/nichekino/shintomemes/blob/main/sanae-middle/image2.png?raw=true",
                 "https://github.com/nichekino/shintomemes/blob/main/sanae-middle/image3.png?raw=true"
-            ]
+                ];
             const randomIndex = Math.floor(Math.random() * images.length);
-            const randomImage = images[randomIndex];
-            document.getElementById("randomImage").src = randomImage;
+            document.getElementById("randomImage").src = images[randomIndex];
+            console.log(randomIndex);
+            console.log(images[randomIndex]);
         </script>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
