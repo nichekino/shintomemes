@@ -23,12 +23,14 @@
                 background-repeat: no-repeat;
                 height: 100vh;
             }
-            middle-img {
-                max-width: 50%;
-                max-height:50%;
-                align-items: center;
-                justify-content: center;
-                display: flex;
+            #image {
+                width: min(450px, 75vw);
+                border-radius: 2px;
+                cursor: pointer;
+                transition: scale 100ms ease-out;
+            }
+            #image:active {
+                scale: 0.98;
             }
             html, body {
                 overflow: hidden;
@@ -41,15 +43,15 @@
         <audio id="bg-music" autoplay loop>
             <source src="https://github.com/nichekino/shintomemes/raw/refs/heads/main/MoFTitle.mp3" type=audio/mpeg>
         </audio>
-        <middle-img id="randomImage" alt="Random Image">
+        <img id="randomImage" alt="Random Image">
         <script>
-            const images = [
+            const possibilities = [
                 "https://github.com/nichekino/shintomemes/blob/main/sanae-middle/image1.png?raw=true",
                 "https://github.com/nichekino/shintomemes/blob/main/sanae-middle/image2.png?raw=true",
                 "https://github.com/nichekino/shintomemes/blob/main/sanae-middle/image3.png?raw=true"
                 ];
-            const randomIndex = Math.floor(Math.random() * images.length);
-            document.getElementById("randomImage").src = images[randomIndex];
+            const index = Math.floor(Math.random() * possibilities.length);
+            document.getElementById("image").src = possibilities[index];
             console.log(randomIndex);
             console.log(images[randomIndex]);
         </script>
