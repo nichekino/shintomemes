@@ -19,10 +19,11 @@
                 height: 100vh;
             }
             #click-count-container {
+                display: flex;
                 position: absolute;
-                top: 15%;
-                left: 50%;
-                transform: translate(-50%,-50%);
+                justify-content: center;
+                top: 20%;
+                width: 50%;
             }
             #click-count {
                 font-family: "Roboto", sans-serif;
@@ -80,7 +81,7 @@
                 clickCount ++;
                 document.getElementById("click-count").textContent = 'Donated: ' + clickCount + "¥";
                 const pressAudio = document.getElementById("press");
-                const clone = pressAUdio.cloneNode(true);
+                const clone = pressAudio.cloneNode(true);
                 clone.volume = 0.5;
                 clone.play();
                 const img = document.querySelector(".image");
