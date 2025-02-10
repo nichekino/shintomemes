@@ -65,6 +65,9 @@
         <audio id="bg-music" autoplay loop>
             <source src="https://github.com/nichekino/shintomemes/raw/refs/heads/main/MoFTitle.mp3" type=audio/mpeg>
         </audio>
+        <audio id="press">
+            <source src="https://github.com/nichekino/shintomemes/raw/refs/heads/main/press.mp3" type=audio/mpeg>
+        </audio>
         <div class="image-container">
             <img id="randomImage" alt="sanae-middle" class="image" onclick="increment()">
         </div>
@@ -76,7 +79,9 @@
             function increment() {
                 clickCount ++;
                 document.getElementById("click-count").textContent = 'Donated: ' + clickCount + "¥";
-
+                let pressAudio = document.getElementById("press");
+                pressAudio.volume = 0.5;
+                pressAudio.play();
                 const img = document.querySelector(".image");
                 img.style.transform = "scale(0.9)";
                 setTimeout(() => {
