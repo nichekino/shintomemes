@@ -79,9 +79,10 @@
             function increment() {
                 clickCount ++;
                 document.getElementById("click-count").textContent = 'Donated: ' + clickCount + "¥";
-                let pressAudio = document.getElementById("press");
-                pressAudio.volume = 0.5;
-                pressAudio.play();
+                const pressAudio = document.getElementById("press");
+                const clone = pressAUdio.cloneNode(true);
+                clone.volume = 0.5;
+                clone.play();
                 const img = document.querySelector(".image");
                 img.style.transform = "scale(0.9)";
                 setTimeout(() => {
