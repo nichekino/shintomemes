@@ -18,6 +18,13 @@
                 background-repeat: no-repeat;
                 height: 100vh;
             }
+            #click-count {
+                font-size: 24px;
+                font-weight: bold;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
             .image-container {
                 position: absolute;
                 top: 50%;
@@ -57,6 +64,20 @@
             <!-- <img id="randomImage" alt="sanae-middle" style="width: min(450px, 75vw); animation: spin infinite linear; animation-duration: 60s; border-readius: 2px; cursor: pointer; transition: transform 0.2s ease-in-out;"> -->
             <img id="randomImage" alt="sanae-middle" class="image">
         </div>
+        <div id="click-count">Dibated: 0¥</div>
+        <script>
+            let clickCount = 0;
+            function increment() {
+                clickCount ++;
+                document.getElementById("click-count").textContent = "Donated: ${clickCount}¥";
+
+                const img = document.querySelector(".image");
+                img.style.transform = "scale(0.9)";
+                setTimeout(() => {
+                    img.style.transform = "scale(1);
+                }, 50);
+            }
+        </script>
         <script>
             const possibilities = [
                 "https://github.com/nichekino/shintomemes/blob/main/sanae-middle/image1.png?raw=true",
