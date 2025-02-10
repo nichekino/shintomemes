@@ -24,7 +24,10 @@
                 height: 100vh;
             }
             #image {
-                width: min(450px, 75vw);
+                max-width: 25vw;
+                max-height: 25vh;
+                width: auto;
+                height: auto;
                 border-radius: 2px;
                 cursor: pointer;
                 transition: scale 100ms ease-out;
@@ -35,6 +38,9 @@
             html, body {
                 overflow: hidden;
                 height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         </style>
     </head>
